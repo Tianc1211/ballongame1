@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BART - 气球实验</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="instructions" class="box">
+        <h2>欢迎参加本次实验</h2>
+        <h3>游戏规则：</h3>
+        <ol>
+            <li>点击“打气”按钮给气球充气，每次充气获得1分，并为气球注入10个单位的气体。</li>
+            <li>点击“保存分数”按钮保存当前分数，并进入下一轮，游戏一共有10轮。</li>
+            <li>气球的最大容积为50-150之间的随机数，如果气球爆炸，本轮得分清零。</li>
+            <li>尽量多得分，但避免气球爆炸！Tips：每轮的前四次不会爆炸哦。</li>
+            <li>制作者：上海大学-吴嘉豪</li>
+        </ol>
+    </div>
+    <div id="inputForm" class="box">
+        <h3>请在下方输入您的学号开始游戏：</h3>
+        <label for="studentId">学号：</label>
+        <input type="text" id="studentId" required />
+        <button id="startButton">开始游戏</button>
+    </div>
+    <canvas id="canvas" width="800" height="600" style="display: none;"></canvas>
+    
+    <div id="scoreSummary" class="hidden">
+        <h2>游戏结束！</h2>
+        <p id="finalScore"></p>
+        <p id="finalRank"></p>
+        <div id="playerData" class="hidden"></div> <!-- 玩家数据区域 -->
+        <button id="restartGameBtn">重新开始</button>
+    </div>
+
+    <div id="controls" class="box hidden"> <!-- 添加的控制区域 -->
+        <button id="inflateButton">打气</button>
+        <button id="saveButton">保存分数</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
