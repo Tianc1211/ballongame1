@@ -44,7 +44,7 @@ document.getElementById('saveButton').addEventListener('click', saveScore);
 function startGame() {
     studentId = document.getElementById('studentId').value;
     if (!studentId) {
-        alert('请输入您的学号');
+        alert('请输入您的游戏ID');
         return;
     }
     document.getElementById('instructions').style.display = 'none';
@@ -198,7 +198,7 @@ function displayPlayerData() {
 
     // 表头
     const headerRow = document.createElement('tr');
-    headerRow.innerHTML = '<th>学号</th><th>分数</th><th>总打气次数</th><th>平均均衡打气次数</th>';
+    headerRow.innerHTML = '<th>游戏ID</th><th>分数</th><th>总打气次数</th><th>平均均衡打气次数</th>';
     table.appendChild(headerRow);
 
     // 添加玩家数据行
